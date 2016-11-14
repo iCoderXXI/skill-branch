@@ -50,6 +50,7 @@ fetch(pcUrl)
   .then(async (res) => {
     console.log('Got it!');
     pc = await res.json();
+    console.log(pc);
   })
   .catch(err => {
     console.log('Чтото пошло не так:', err);
@@ -59,13 +60,17 @@ fetch(pcUrl)
 const app = express();
 app.use(cors());
 
+function notFound(res) {
+  res.status(404).send('Not Found');
+}
+
 app.get('/task3A', (req, res) => {
   res.json(pc);
 });
 
-function notFound(res) {
-  res.send('Not found', 404);
-}
+// app.get('/task3A/length', (req, res) => {
+//   res.json(Object.keys(pc).length);
+// });
 
 app.get('/task3A/volumes', (req, res) => {
   if (pc.hdd) {
@@ -91,16 +96,21 @@ app.get('/task3A/volumes', (req, res) => {
 });
 
 app.get('/task3A/:lvl1', (req, res) => {
-  if (pc[req.params.lvl1] !== undefined) {
-    res.json(pc[req.params.lvl1]);
+  const p = req.params;
+  if (pc[p.lvl1] !== undefined) {
+    res.json(pc[p.lvl1]);
   } else {
     notFound(res);
   }
 });
 
 app.get('/task3A/:lvl1/:lvl2', (req, res) => {
-  const p = req.params
-  if (pc[p.lvl1] !== undefined && pc[p.lvl1][p.lvl2] !== undefined) {
+  const p = req.params;
+  if (
+      p.lvl2 !== 'length' &&
+      pc[p.lvl1] !== undefined &&
+      pc[p.lvl1][p.lvl2] !== undefined
+  ) {
     res.json(pc[p.lvl1][p.lvl2]);
   } else {
     notFound(res);
@@ -108,8 +118,9 @@ app.get('/task3A/:lvl1/:lvl2', (req, res) => {
 });
 
 app.get('/task3A/:lvl1/:lvl2/:lvl3', (req, res) => {
-  const p = req.params
-  if (pc[p.lvl1] !== undefined &&
+  const p = req.params;
+  if (p.lvl3 !== 'length' &&
+      pc[p.lvl1] !== undefined &&
       pc[p.lvl1][p.lvl2] !== undefined &&
       pc[p.lvl1][p.lvl2][p.lvl3] !== undefined
   ) {
