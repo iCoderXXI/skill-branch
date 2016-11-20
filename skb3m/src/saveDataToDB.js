@@ -22,3 +22,19 @@ export default async function saveDataToDB(data) {
     throw err;
   }
 }
+
+// const data = {
+//   user: {
+//     name: 'iCoder.XXI',
+//   },
+//   pets: [
+//     {
+//       name: 'Yosia',
+//       type: 'dog',
+//     },
+//     {
+//       name: 'Pusia',
+//       type: 'cat',
+//     }
+//   ],
+// };

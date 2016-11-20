@@ -3,11 +3,19 @@ import _ from 'lodash';
 const { Schema } = mongoose;
 
 const PetSchema = new Schema({
-  type: String,
-  name: String,
+  type: {
+    type: String,
+    required: true,
+    enum: ['cat', 'dog'],
+  },
+  name: {
+    type: String,
+    required: true,
+  },
   owner: {
     type: Schema.Types.ObjectId,
     ref: 'User',
+    required: true,
   }
 }, {
   timestamps: true,
