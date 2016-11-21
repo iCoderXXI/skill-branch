@@ -1,16 +1,18 @@
 import hsl from 'hsl-to-hex';
 
 const testHEX3 = (color) => {
-  const re3 = /^(#)?[0-9a-f][0-9a-f][0-9a-f]$/i;
+  //const re3 = /^(#)?[0-9a-f][0-9a-f][0-9a-f]$/i;
+  const re3 = /^(#)?[0-9a-f]{3}$/i;
   if (re3.test(color)) {
     color = color.replace('#','');
     let colorArray = color.split('');
     console.log(colorArray);
-    const colors = [];
-    colorArray.map( (element, index, array) => {
-      colors.push(element);
-      colors.push(element);
-    })
+    // const colors = [];
+    // colorArray.map( (element, index, array) => {
+    //   colors.push(element);
+    //   colors.push(element);
+    // })
+    const colors = colorArray.map((v)=>v+v);
 
     let ret = `#${colors.join('')}`;
     console.log(ret);
@@ -20,7 +22,8 @@ const testHEX3 = (color) => {
 }
 
 const testHEX6 = (color) => {
-  const re6 = /^(#)?[0-9a-f]{2}[0-9a-f]{2}[0-9a-f]{2}$/i;
+  //const re6 = /^(#)?[0-9a-f]{2}[0-9a-f]{2}[0-9a-f]{2}$/i;
+  const re6 = /^(#)?([0-9a-f]{2}){3}$/i;
   if (re6.test(color)) {
     color = color.replace('#','');
     return `#${color}`;
@@ -67,4 +70,15 @@ const testHSL = (color) => {
   return false;
 }
 
-export { testHEX3, testHEX6, testRGB, testHSL };
+export default (color) => {
+  const tests = [testHEX3, testHEX6, testRGB, testHSL];
+
+  if (color && color.length>0) {
+    for(let i in tests) {
+      let ret = tests[i](color);
+      if (ret === -1) return 'Invalid color';
+      if (ret) return ret;
+    }
+  }
+  return 'Invalid color';
+}
