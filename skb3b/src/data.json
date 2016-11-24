@@ -1,0 +1,226 @@
+{
+   "users": [
+      {
+         "id": 1,
+         "username": "greenday",
+         "fullname": "Billie Joe Armstrong",
+         "password": "Sweet Children",
+         "values": {
+            "money": "200042$",
+            "origin": "East Bay, California, United States"
+         }
+      },
+      {
+         "id": 2,
+         "username": "offspring",
+         "fullname": "Dexter Holland",
+         "password": "Manic Subsidal",
+         "values": {
+            "money": "100042$",
+            "origin": "Huntington Beach, California, United States"
+         }
+      },
+      {
+         "id": 3,
+         "username": "blink",
+         "fullname": "Mark Hoppus",
+         "password": "Tom DeLonge",
+         "values": {
+            "money": "200202$",
+            "origin": "Poway, California, United States"
+         }
+      },
+      {
+         "id": 4,
+         "username": "blink",
+         "fullname": "Mark Hoppus",
+         "password": "Tom DeLonge",
+         "values": {
+            "money": "107321$",
+            "origin": "Poway, California, United States"
+         }
+      },
+      {
+         "id": 5,
+         "username": "stones",
+         "fullname": "Mick Jagger",
+         "password": "The Stones",
+         "values": {
+            "money": "88632$",
+            "origin": "London, England"
+         }
+      },
+      {
+         "id": 6,
+         "username": "pistols",
+         "fullname": "Ian Paice",
+         "password": "Roundabout",
+         "values": {
+            "money": "387567$",
+            "origin": "Hertford, Hertfordshire, England"
+         }
+      },
+      {
+         "id": 7,
+         "username": "purple",
+         "fullname": "Ian Paice",
+         "password": "Tom DeLonge",
+         "values": {
+            "money": "280002$",
+            "origin": "London, England"
+         }
+      },
+      {
+         "id": 8,
+         "username": "nikolaev",
+         "fullname": "Игорь Юрьевич Николаев",
+         "password": "За любовь!",
+         "values": {
+            "money": "760835р",
+            "origin": "Холмск, Сахалинская область, Россия"
+         }
+      }
+   ],
+   "pets": [
+      {
+         "id": 1,
+         "userId": 1,
+         "type": "dog",
+         "color": "#f44242",
+         "age": 1
+      },
+      {
+         "id": 2,
+         "userId": 2,
+         "type": "dog",
+         "color": "#4242f4",
+         "age": 34
+      },
+      {
+         "id": 3,
+         "userId": 3,
+         "type": "dog",
+         "color": "#42f4c8",
+         "age": 26
+      },
+      {
+         "id": 4,
+         "userId": 4,
+         "type": "dog",
+         "color": "#db7e12",
+         "age": 10
+      },
+      {
+         "id": 5,
+         "userId": 5,
+         "type": "dog",
+         "color": "#f60cca",
+         "age": 31
+      },
+      {
+         "id": 6,
+         "userId": 6,
+         "type": "cat",
+         "color": "#4242f4",
+         "age": 19
+      },
+      {
+         "id": 7,
+         "userId": 7,
+         "type": "dog",
+         "color": "#4242f4",
+         "age": 77
+      },
+      {
+         "id": 8,
+         "userId": 8,
+         "type": "dog",
+         "color": "#4242f4",
+         "age": 20
+      },
+      {
+         "id": 9,
+         "userId": 8,
+         "type": "rat",
+         "color": "#f27497",
+         "age": 15
+      },
+      {
+         "id": 10,
+         "userId": 4,
+         "type": "rat",
+         "color": "#fede13",
+         "age": 15
+      },
+      {
+         "id": 11,
+         "userId": 1,
+         "type": "cat",
+         "color": "#143bf7",
+         "age": 1
+      },
+      {
+         "id": 12,
+         "userId": 2,
+         "type": "dog",
+         "color": "#128215",
+         "age": 34
+      },
+      {
+         "id": 13,
+         "userId": 3,
+         "type": "dog",
+         "color": "#f6cdbf",
+         "age": 26
+      },
+      {
+         "id": 14,
+         "userId": 4,
+         "type": "cat",
+         "color": "#db7e12",
+         "age": 10
+      },
+      {
+         "id": 15,
+         "userId": 5,
+         "type": "dog",
+         "color": "#aa74d6",
+         "age": 31
+      },
+      {
+         "id": 16,
+         "userId": 6,
+         "type": "dog",
+         "color": "#4242f4",
+         "age": 19
+      },
+      {
+         "id": 17,
+         "userId": 7,
+         "type": "cat",
+         "color": "#7fe16a",
+         "age": 77
+      },
+      {
+         "id": 18,
+         "userId": 8,
+         "type": "dog",
+         "color": "#412753",
+         "age": 20
+      },
+      {
+         "id": 19,
+         "userId": 8,
+         "type": "rat",
+         "color": "#9d054d",
+         "age": 15
+      },
+      {
+         "id": 20,
+         "userId": 4,
+         "type": "rat",
+         "color": "#fd6a70",
+         "age": 15
+      }
+   ]
+}
